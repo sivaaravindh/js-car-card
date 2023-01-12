@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"></link>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        
+      </div>
+      <script>
+        let food=[
+          {
+            namec:"car",
+            name:"Mercedez Benz c300 2022",
+            imagurl1:"https://imgd-ct.aeplcdn.com/370x208/n/cw/ec/124027/urban-cruiser-hyryder-exterior-right-front-three-quarter-3.jpeg?isig=0&q=75",
+            imagurl2:"https://imgd-ct.aeplcdn.com/370x208/n/cw/ec/40530/i20-exterior-right-front-three-quarter-5.jpeg?q=75",
+            imagurl3:"https://imgd-ct.aeplcdn.com/370x208/n/cw/ec/115025/innova-hycross-exterior-right-front-three-quarter-2.jpeg?isig=0&q=75",
+          },
+          // {
+          //   namec:"car",
+          //   name:"Mercedez Benz c300 2022",
+          //  
+          
+          // },
+          // {
+          //   namec:"car",
+          //   name:"Mercedez Benz c300 2022",
+          //  
+          
+          // },
+        
+        ]
+
+        let cont=document.querySelector(".container");
+
+        let car1=document.createElement("div");
+        car1.classList.add("row");
+        cont.appendChild(car1);
+        
+          food.forEach(e=>{
+            let div=document.createElement("div");
+            div.classList.add("col");
+            car1.appendChild(div);
+
+            let div2=document.createElement("div");
+            div2.classList.add("col-card");
+            div.appendChild(div2);
+            
+            let divim=document.createElement("div");
+            divim.classList.add("col-i");
+            div2.appendChild(divim);
+
+            let  img=document.createElement("img");
+             img.src=e.imagurl1;
+            divim.appendChild(img);
+
+            let con=document.createElement("div");
+            con.classList.add("con");
+            div2.appendChild(con);
+
+            let logo=document.createElement("div");
+            logo.classList.add("logo");
+            con.appendChild(logo);
+
+            let lgona=document.createElement("p")
+            lgona.innerHTML=e.namec;
+            logo.appendChild(lgona);
+
+            let head=document.createElement("h2");
+             head.innerHTML=e.name;
+             con.appendChild(head);
+              
+             let hil=document.createElement("div");
+             hil.classList.add("logo2");
+            con.appendChild(hil);
+
+            let icon=document.createElement("i");
+            icon.setAttribute("class","two fa fa-car")
+            hil.appendChild(icon);
+
+           let list=document.createElement("p");
+           list.innerHTML="millage :40,000 miles";
+           hil.appendChild(list);
+
+          let hil2=document.createElement("div");
+          hil2.classList.add("logo2");
+          con.appendChild(hil2);
+            
+          let icon2=document.createElement("i");
+          icon2.setAttribute("class","two fa fa-ban")
+          hil2.appendChild(icon2)
+
+          let list1=document.createElement("p");
+          list1.innerHTML="fuel: 25mpg";
+          hil2.appendChild(list1);
+
+            
+          let hil3=document.createElement("div");
+          hil3.classList.add("logo2");
+          con.appendChild(hil3);
+          
+          let icon3=document.createElement("i");
+          icon3.setAttribute("class","two fa fa-shield")
+          hil3.appendChild(icon3)
+
+          let list2=document.createElement("p");
+          list2.innerHTML="safety:";
+          hil3.appendChild(list2);
+          
+          let icon4=document.createElement("i");
+          icon4.setAttribute("class"," kill fa fa-star")
+          hil3.appendChild(icon4)
+
+          let icon5=document.createElement("i");
+          icon5.setAttribute("class","kill fa fa-star")
+          hil3.appendChild(icon5)
+
+          let icon6=document.createElement("i");
+          icon6.setAttribute("class","kill fa fa-star")
+          hil3.appendChild(icon6)
+
+
+          let list4=document.createElement("p");
+          list4.innerHTML="pickup a color:";
+          con.appendChild(list4);
+          
+          let list5=document.createElement("p");
+          con.appendChild(list5);
+
+          let button1=document.createElement("button");
+          let button2=document.createElement("button");
+          let button3=document.createElement("button");
+
+          list5.appendChild(button1)
+          list5.appendChild(button2)
+          list5.appendChild(button3)
+
+          button1.style.background="blue";
+          button2.style.background="red";
+          button3.style.background="black";
+
+          button1.addEventListener("click",function(){
+              img.src=e.imagurl1
+              logo.style.background="blue"
+          })
+          button2.addEventListener("click",function(){
+              img.src=e.imagurl2
+              logo.style.background="red";
+          })
+          button3.addEventListener("click",function(){
+              img.src=e.imagurl3
+              logo.style.background="black";
+          })
+
+          let list6=document.createElement("b");
+          list6.innerHTML="$134,450";
+          list5.appendChild(list6);
+
+          let list7=document.createElement("s");
+          list7.innerHTML="$134,450";
+          list5.appendChild(list7);
+
+          let col2=document.createElement("div");
+          col2.classList.add("con1");
+          con.appendChild(col2);
+
+          let list8=document.createElement("p");
+          list8.innerHTML="Add to card";
+          col2.appendChild(list8);
+
+
+          // let list5=document.createElement("b");
+          // list5.innerHTML="$134,450";
+          // con.appendChild(list4);
+
+
+           
+
+            // let div8=document.createElement("div");
+            // div8.classList.add("col-3");
+            // div2.appendChild(div8);
+
+            // let codes=document.createElement("p");
+            // codes.innerHTML=e.code;
+            // div8.appendChild(codes);
+
+            // let addcard=document.createElement("div");
+            // addcard.classList.add("addacrt");
+            // div2.appendChild(addcard);
+
+            // let carLable=document.createElement("div");
+            // carLable.classList.add("carlabel")
+            // addcard.appendChild(carLable);
+            // carLable.innerHTML="ADD TO CART"
+
+            // let addcard2=document.createElement("div");
+            // addcard2.classList.add("addacrt2");
+            // addcard.appendChild(addcard2);
+
+            // let minus=document.createElement("button");
+            // minus.setAttribute("id","btn2")
+            // minus.innerHTML="-";
+            // addcard2.appendChild(minus);
+
+            // let input=document.createElement("input");
+            // input.setAttribute("type","text");
+            // input.setAttribute("id","number");
+            // input.value=1;
+            // addcard2.appendChild(input);
+
+            // let plus=document.createElement("button");
+            // plus.setAttribute("id","btn1")
+            // plus.innerHTML="+";
+            // addcard2.appendChild(plus);
+
+            // minus.addEventListener("click",function(){
+            //   if(input.value>0){
+            //     input.value--;
+            //   }
+            // })
+
+            // plus.addEventListener("click",function(){
+             
+            //     input.value++;
+             
+            // })
+          })
+
+      </script>
+</body>
+</html>
